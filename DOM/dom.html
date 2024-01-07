@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <button class="sba">Hello</button>
+    <button class="sb">Second Button</button>
+
+    <script>
+        // it replaces all the thing in the webpage with the one it is equal to
+        /*
+        document.body.innerHTML = 'yes';
+        document.title = 'head';
+        */
+        // you can write a html inside a javascript
+
+        // document.body.innerHTML = '<button>GoodJob</button>';
+        // The below will select a html thing between the '' . The html inside the javascript becomes an object for javacript
+        // To get the user input out we use .value and .inner text
+        console.log(document.querySelector('.sb'));
+        document.querySelector('.sb').innerHTML = 'changedButton';
+        document.querySelector('.sba').innerHTML = 'changedButton';
+
+    </script>
+</body>
+
+</html>

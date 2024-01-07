@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Todo List Practise 1</h2>
+    <label for="inp">TodoList1</label>
+    <input type="text" placeholder="ToDo List" class="inp" onkeydown="
+    if(event.key==='Enter'){
+        call();
+    }
+    ">
+    <button onclick="
+    call();
+    ">Add</button>
+    <div class="divv"></div>
+    <script>
+        let todolist = [];
+
+        function displayTodoList() {
+            let todolisthtml = '';
+            for (let i = 0; i < todolist.length; i++) {
+                const todo = todolist[i];
+                // The down part is imp
+                const html = `<p>${todo}</p>`;
+                todolisthtml += html;
+            }
+            document.querySelector('.divv').innerHTML = todolisthtml;
+        }
+
+        // Call the displayTodoList function to initially display the list
+        displayTodoList();
+
+        function call() {
+            todolist.push(document.querySelector('.inp').value);
+            console.log(todolist);
+            document.querySelector('.inp').value = '';
+
+            // Update the displayed list after adding a new item
+            displayTodoList();
+        }
+    </script>
+</body>
+
+</html>

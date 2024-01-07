@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RockPaperScisor</title>
+    <link rel="stylesheet" href="FinalRock.css">
+</head>
+
+<body>
+    <p class="tittle">Rock Paper Scissors</p>
+
+    <head class="head">
+        <button class="button1" onclick="
+    playGame('rock');
+    "><img src="https://supersimple.dev/projects/rock-paper-scissors/images/rock-emoji.png" alt=""
+                class="img"></button>
+        <button class="button1" onclick="
+    playGame('paper');
+    "><img src="https://supersimple.dev/projects/rock-paper-scissors/images/paper-emoji.png" alt=""
+                class="img"></button>
+
+        <button class="button1" onclick="
+    playGame('scissor');
+    "><img src="https://supersimple.dev/projects/rock-paper-scissors/images/scissors-emoji.png" alt=""
+                class="img"></button>
+    </head>
+    <p class="show"></p>
+    <p class="picked"></p>
+    <p class="js-score"></p>
+    <p class="picky"></p>
+    <button onclick="
+    score.win=0;
+    score.loss=0;
+    score.tie=0;
+    localStorage.removeItem('score');
+    ">Reset</button>
+    <button onclick="
+    autoplay();
+    " class="aplay">AutoPlay</button>
+    <br>
+    <br>
+    <br>
+
+    <script src="FinalRock.js">
+    </script>
+</body>
+
+</html>

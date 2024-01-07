@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .butt {
+            color: black;
+            background-color: gray;
+        }
+
+        .toggle {
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <button class="butt" onclick="
+    
+    
+    number+=1;
+        change(number);
+        ">Gaming</button>
+    <script>
+        let number = 0;
+        function change(c) {
+            if (c % 2 === 1) {
+                document.querySelector('.butt').classList.add('toggle');
+            }
+            else {
+                document.querySelector('.butt').classList.remove('toggle');
+            }
+        }
+    </script>
+</body>
+
+</html>

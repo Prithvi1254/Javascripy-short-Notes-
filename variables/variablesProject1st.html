@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+</head>
+<!-- On click runs in javascrit when the button is cliclked 
+Let,cont,var are the three variables to create variables-->
+
+<body>
+    <p>Cart quantity</p>
+    <p class="showw"></p>
+    <button onclick="
+    console.log(`CartQuantity : ${cartquantity}`);
+    show();
+    ">Show quantity</button>
+
+    <button onclick="
+    cartquantity+=1;
+    console.log(`CartQuantity : ${cartquantity}`);
+    show();
+    ">Add to cart</button>
+
+    <button onclick="
+    cartquantity+=2;
+    console.log(`CartQuantity : ${cartquantity}`);
+    show();
+    ">+2</button>
+
+    <button onclick="
+    cartquantity+=3;
+    console.log(`CartQuantity : ${cartquantity}`);
+    show();
+    ">+3</button>
+
+    <button onclick="
+    cartquantity=0;
+    console.log('cart was reset');
+    console.log(`CartQuantity : ${cartquantity}`);
+    show();
+    ">Reset Cart</button>
+    <script>
+        let cartquantity = 0;
+        function show() {
+            document.querySelector('.showw').innerHTML = `The cart quantity is ${cartquantity}`;
+        }
+    </script>
+</body>
+
+</html>

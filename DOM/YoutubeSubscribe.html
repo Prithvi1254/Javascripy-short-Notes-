@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Project</title>
+    <style>
+        button {
+            background-color: black;
+            color: white;
+            width: 100px;
+            height: 30px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        .clicked {
+            background-color: gray;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Youtube subscribe button</p>
+    <button class="subscribe" onclick=" 
+    const buttonElement=document.querySelector('.subscribe');
+    if(buttonElement.innerText==='Subscribe'){
+        buttonElement.innerHTML='Subscribed';
+        buttonElement.classList.add('clicked');
+        // This class is for whne it is clicked
+    }
+    else{
+        buttonElement.innerHTML='Subscribe';
+        buttonElement.classList.remove('clicked');
+    }
+    
+    ">Subscribe</button>
+    <br>
+    <br>
+    <br>
+    <script>
+        let click = 0;
+    </script>
+</body>
+
+</html>

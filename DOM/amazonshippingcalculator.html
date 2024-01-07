@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmazonCalci</title>
+    <style>
+        button {
+            background-color: green;
+            color: white;
+            height: 30px;
+            width: 110px;
+        }
+
+        .onew {
+            /* border: 1px solid black; */
+            height: 5px;
+            width: 100px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Amazon Shipping calculator</p>
+    <!-- Just like how document is for the webpage the window is for the webrowser ie all including console webpage etc -->
+    <!-- One keydown(It help us to change the webpage when typed on keybaord) tell us which was the last key on the keyboard with the help  of event.key you get all the typed from keyboard -->
+    <input type="text" name="inputs" id="input" class="onew" placeholder="Cost of order" onkeydown="
+    console.log(event.key);
+    if(event.key ==='Enter'){
+        call();
+    }
+    ">
+    <button class="calcbutton" onclick="
+    call();
+    ">Calculate</button>
+    <p class="para"></p>
+
+
+    <script>
+        // For input there is no innerhtml so we choos evalue
+        function call() {
+            const number = document.querySelector('.onew');
+            // here down the dom value creates a string so js has a nmber function which helps to int
+            let cost = Number(number.value);
+            if (cost > 40) {
+
+                cost += 10;
+            }
+            document.querySelector('.para').innerHTML = `The amount is $${cost}`;
+        }
+    </script>
+</body>
+
+</html>

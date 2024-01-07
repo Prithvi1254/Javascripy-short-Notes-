@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="finaltodo.css">
+</head>
+
+<body>
+    <h2>Todo List</h2>
+    <input type="text" placeholder="ToDo List" class="inp" onkeydown="
+    if(event.key==='Enter'){
+        call();
+    }
+    ">
+    <input type="date" class="dates">
+    <button class="Adding" onclick="
+    call();
+    ">Add</button>
+    <div class="divv grid"></div>
+
+
+    <script>
+        let todolist = [];
+        let datesList = [];
+
+        function displayTodoList() {
+            let todolisthtml = '';
+            for (let i = 0; i < todolist.length; i++) {
+                const todo = todolist[i];
+                const datestore = datesList[i];
+                // The down part is imp
+                const html = `
+                    <div class="oo">${todo}</div>
+                    <div class="oo">${datestore}</div>
+                    <button class="oo1" onclick="
+                    todolist.splice(${i},1);
+                    displayTodoList();
+                    ">Delete</button>`;
+                todolisthtml += html;
+            }
+            document.querySelector('.divv').innerHTML = todolisthtml;
+        }
+
+        // Call the displayTodoList function to initially display the list
+        displayTodoList();
+
+        function call() {
+            todolist.push(document.querySelector('.inp').value);
+            datesList.push(document.querySelector('.dates').value);
+            document.querySelector('.inp').value = '';
+
+            // Update the displayed list after adding a new item
+            displayTodoList();
+        }
+    </script>
+</body>
+
+</html>

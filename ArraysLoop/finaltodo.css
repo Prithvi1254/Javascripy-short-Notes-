@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+.inp,
+.dates {
+    padding: 10px;
+    margin: 15px 7px;
+}
+
+.dates {
+    cursor: pointer;
+}
+
+.Adding {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.grid {
+
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+}
+
+.oo {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.oo1 {
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    background-color: red;
+    cursor: pointer;
+}

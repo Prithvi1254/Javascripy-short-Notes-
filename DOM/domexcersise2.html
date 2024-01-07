@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name show</title>
+</head>
+
+<body>
+    <label for="inputt">Enter your name</label>
+    <input type="text" class="inputt">
+    <button onclick="
+    func();
+    ">Submit</button>
+    <p class="para"></p>
+
+    <script>
+        function func() {
+            let conq = document.querySelector('.inputt').value;
+            document.querySelector('.para').innerHTML = `The name typed is equal to ${conq}`;
+        }
+    </script>
+</body>
+
+</html>

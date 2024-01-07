@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const valuee = {
+            obj: 1,
+            fun: function () {
+                console.log('hello');
+            }
+        };
+
+        // Passing value into function
+        function display(param) {
+            console.log(param);
+        }
+        display(2);
+        // Passing a function inside a function The below is callback
+        function run(param) {
+            console.log(param);
+            param();
+        }
+        run(function () {
+            console.log('Function in function');
+        })
+        // setTimeout is buil in it take two value one is function to be executed the other is time ie by how much the function to be run is to be delayed it is in milisecond 1000ms=1s
+        setTimeout(function () {
+            console.log('timeout');
+        }, 6000);
+        // Set interval takes same input parameter as above.IT does the same as above but it will keep running every 6s or whatever you have given
+        setInterval(function () { }, 1000);
+    </script>
+</body>
+
+</html>

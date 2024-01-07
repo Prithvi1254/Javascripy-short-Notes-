@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeadtailExcersise</title>
+</head>
+
+<body>
+    <button class="head" onclick="
+        call('head');
+        ">Head</button>
+    <button class="tails" onclick="
+        call('tails');
+    ">Tails</button>
+
+    <p class="para"></p>
+    <script>
+        function call(choose) {
+            document.querySelector('.para').innerHTML = `You choose ${choose}`;
+        }
+    </script>
+</body>
+
+</html>

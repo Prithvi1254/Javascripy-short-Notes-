@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <script>
+        const myarr = [10, 20, 30];
+        console.log(myarr);
+        myarr[0] = 99;
+        console.log(myarr[0]);
+        const win = [1, 'hello', true, { name: 'scoks' }];
+        console.log(win);
+        const n = win.length;
+        console.log(n);
+        const a = myarr.length;
+        console.log(a);
+        myarr.push(100);
+        console.log(myarr);
+        myarr.pop();
+        console.log(myarr);
+        // .POP removes the last element to remove element at particular index we use splice
+        // Splice take two value first value is the index at which to start and the second how many element from the index
+        myarr.push(100);
+        console.log(myarr);
+        myarr.splice(1, 1)
+        console.log(myarr);
+        // For loop
+        for (let i = 0; i <= 5; i++) {
+            console.log(i);
+        }
+    </script>
+</body>
+
+</html>
